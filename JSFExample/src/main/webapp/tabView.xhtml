@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>TabView</title>
+</h:head>
+<h:body>
+	<h:form id="form">
+		<p:growl id="msgs" showDetail="true" />
+		<h3 style="margin-top: 0">Course Description</h3>
+		<p:tabView>
+			<p:tab title="Java">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage value="images/courses/java.png" />
+					<h:outputText
+						value="Java is a programming language and a platform.  
+Java is a high level, robust, secured and object-oriented programming language.  
+Platform: Any hardware or software environment in which a program runs, is known as a platform.   
+Since Java has its own runtime environment (JRE) and API, it is called platform." />
+				</h:panelGrid>
+			</p:tab>
+			<p:tab title="Spring">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage name="images/courses/spring.png" />
+					<h:outputText
+						value="Spring is a lightweight framework. It can be thought of as a framework   
+of frameworks because it provides support to various frameworks such as Struts, Hibernate, Tapestry, EJB, JSF etc.   
+The framework, in broader sense, can be defined as a structure where we find solution of the various technical problems. " />
+				</h:panelGrid>
+			</p:tab>
+			<p:tab title="Python">
+				<h:panelGrid columns="2" cellpadding="10">
+					<p:graphicImage name="images/courses/python.png" />
+					<h:outputText
+						value="Python is a simple, easy to learn, powerful, high level and object-oriented   
+programming language. Guido Van Rossum is known as the founder of python programming." />
+				</h:panelGrid>
+			</p:tab>
+		</p:tabView>
+	</h:form>
+</h:body>
+</html>

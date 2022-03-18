@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<title>Hello World - Input Form</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			<h:inputText id="name" value="#{theUserName}"
+				p:placeholder="What's your name?" />
+			<h:commandButton value="Submit" action="myresponse" />
+		</h:form>
+	</h:body>
+</html>

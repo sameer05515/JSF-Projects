@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>ProgressBar</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:growl id="growl" />
+		<h3>Ajax ProgressBar Example</h3>
+		<p:commandButton value="Start" type="button"
+			onclick="PF('pbAjax').start();PF('startButton2').disable();"
+			widgetVar="startButton2" />
+		<p:commandButton value="Cancel" actionListener="#{progressBar.cancel}"
+			oncomplete="PF('pbAjax').cancel();PF('startButton2').enable();" />
+		<br />
+		<br />
+		<p:progressBar widgetVar="pbAjax" ajax="true"
+			value="#{progressBar.progress}" labelTemplate="{value}%"
+			styleClass="animated" global="false">
+			<p:ajax event="complete" listener="#{progressBar.onComplete}"
+				update="growl" oncomplete="PF('startButton2').enable()" />
+		</p:progressBar>
+	</h:form>
+</h:body>
+</html>
